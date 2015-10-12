@@ -1,0 +1,54 @@
+String str;
+
+Point one = new Point();
+
+println ("Please enter the first co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+one.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+one.y = Double.parseDouble(str);
+println();
+
+Point two = new Point();
+
+println ("Please enter the second co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+two.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+two.y = Double.parseDouble(str);
+println();
+
+Point three = new Point();
+
+println ("Please enter the third co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+three.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+three.y = Double.parseDouble(str);
+println();
+
+double distance12, distance13, distance23;
+
+distance12 = Math.sqrt(9)
+
+println distance12
+
+println(one.x);
+println(one.y);
+println(two.x);
+println(two.y);
+println(three.x);
+println(three.y);
+
+
+
+class Point {
+	double x;
+	double y;
+}

@@ -1,12 +1,23 @@
 String str;
 
-print "Please enter command:  ";
+print ("Please enter command:  ");
 str = System.console().readLine();
+int length5;
+int i;
+int operator_location = -1;
+length5 = str.length();
 
-int length = str.length();
+println (length5);
 
-// println length
+println (str.substring(0,1));
 
-for (i = 1; length; i++) {
-	println (str.charAt(i-1));
+for (i = 0; i <= (length5 - 1); i++) {
+	if(str.substring(i, i + 1) == "+") {
+		operator_location = i;
+		println(operator_location);
+	}
+	println("Hello World");
 }
+
+println (operator_location);
+

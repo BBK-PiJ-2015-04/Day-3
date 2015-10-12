@@ -2,11 +2,11 @@ String str;
 
 print ("Please enter a number ");
 str = System.console().readLine();
-double number1 = Integer.parseInt(str);
+double number1 = Double.parseDouble(str);
 
 print ("Please enter another number ");
 str = System.console().readLine();
-double number2 = Integer.parseInt(str);
+double number2 = Double.parseDouble(str);
 
 println ("Please choose an operation to perform: ");
 println ("(1) Add (2) Subtract (3) Multiply (4) Divide");

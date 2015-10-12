@@ -8,10 +8,10 @@ public class No_02_Calculator {
         String str;
         System.out.print ("Please enter a number ");
         str = System.console().readLine();
-        double number1 = Integer.parseInt(str);
+        double number1 = Double.parseDouble(str);
         System.out.print ("Please enter another number ");
         str = System.console().readLine();
-        double number2 = Integer.parseInt(str);
+        double number2 = Double.parseDouble(str);
         System.out.println ("Please choose an operation to perform: ");
         System.out.println ("(1) Add (2) Subtract (3) Multiply (4) Divide");
         System.out.print ("Your choice: ");
