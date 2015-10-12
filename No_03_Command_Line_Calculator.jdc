@@ -1,0 +1,12 @@
+String str;
+
+print "Please enter command:  ";
+str = System.console().readLine();
+
+int length = str.length();
+
+// println length
+
+for (i = 1; length; i++) {
+	println (str.charAt(i-1));
+}
