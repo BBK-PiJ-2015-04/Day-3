@@ -5,12 +5,6 @@ Rectangle one = new Rectangle();
 one.upLeft = new Point();
 one.downRight = new Point();
 
-one.upLeft.x = 5;
-one.upLeft.y = 6;
-
-one.downRight.x = 10;
-one.downRight.y = -3;
-
 println ("Please enter the Up Left corner's co-ordinates...");
 print ("The X value: ");
 str = System.console().readLine();

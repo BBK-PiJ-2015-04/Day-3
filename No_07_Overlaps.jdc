@@ -1,0 +1,94 @@
+String str;
+
+Rectangle firstRectangle = new Rectangle();
+Rectangle secondRectangle = new Rectangle();
+
+firstRectangle.upLeft = new Point();
+firstRectangle.downRight = new Point();
+secondRectangle.upLeft = new Point();
+secondRectangle.downRight = new Point();
+
+println ("FIRST RECTANGLE");
+println ("Please enter the Up Left corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+firstRectangle.upLeft.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+firstRectangle.upLeft.y = Double.parseDouble(str);
+println ("Please enter the Down Right corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+firstRectangle.downRight.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+firstRectangle.downRight.y = Double.parseDouble(str);
+println();
+
+println ("SECOND RECTANGLE");
+println ("Please enter the Up Left corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+secondRectangle.upLeft.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+secondRectangle.upLeft.y = Double.parseDouble(str);
+println ("Please enter the Down Right corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+secondRectangle.downRight.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+secondRectangle.downRight.y = Double.parseDouble(str);
+println();
+
+Point fifthPoint = new Point();
+
+println ("Please enter the Fifth Point's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+fifthPoint.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+fifthPoint.y = Double.parseDouble(str);
+println();
+
+boolean insideFirstRectangle;
+boolean insideSecondRectangle;
+
+
+if ((fifthPoint.x < firstRectangle.upLeft.x || fifthPoint.x > firstRectangle.downRight.x) || (fifthPoint.y > firstRectangle.upLeft.y || fifthPoint.y < firstRectangle.downRight.y)) {
+	insideFirstRectangle = false;
+}
+else {
+	insideFirstRectangle = true;
+}
+
+if ((fifthPoint.x < secondRectangle.upLeft.x || fifthPoint.x > secondRectangle.downRight.x) || (fifthPoint.y > secondRectangle.upLeft.y || fifthPoint.y < secondRectangle.downRight.y)) {
+	insideSecondRectangle = false;
+}
+else {
+	insideSecondRectangle = true;
+}
+
+if (insideFirstRectangle && insideSecondRectangle) {
+	println ("The Fifth Point is inside both the rectangles.");
+}
+
+else if (!insideFirstRectangle && !insideSecondRectangle) {
+	println ("The Fifth Point is outside both the rectangles.");
+}
+
+else {
+	println ("The Fifth Point is inside only of the rectangles.");
+}
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+	Point upLeft;
+	Point downRight;
+}
