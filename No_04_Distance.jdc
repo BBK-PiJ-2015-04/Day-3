@@ -35,18 +35,19 @@ println();
 
 double distance12, distance13, distance23;
 
-distance12 = Math.sqrt(9)
+distance12 = Math.sqrt(((one.x - two.x) * (one.x - two.x)) + ((one.y - two.y) * (one.y - two.y)));
+distance13 = Math.sqrt(((one.x - three.x) * (one.x - three.x)) + ((one.y - three.y) * (one.y - three.y)));
+distance23 = Math.sqrt(((two.x - three.x) * (two.x - three.x)) + ((two.y - three.y) * (two.y - three.y)));
 
-println distance12
-
-println(one.x);
-println(one.y);
-println(two.x);
-println(two.y);
-println(three.x);
-println(three.y);
-
-
+if (distance12 < distance13 && distance12 < distance23) {
+	println ("The Points 1 & 2 are the closest.");
+}
+else if (distance13 < distance23) {
+	println ("The Points 1 & 3 are the closest.");
+}
+else {
+	println ("The Points 2 & 3 are the closest.");
+}
 
 class Point {
 	double x;

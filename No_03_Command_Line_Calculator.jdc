@@ -1,18 +1,18 @@
-String str;
+String userInput;
 
 print ("Please enter command:  ");
-str = System.console().readLine();
+userInput = System.console().readLine();
 int length5;
 int i;
 int operator_location = -1;
-length5 = str.length();
+length5 = userInput.length();
 
 println (length5);
 
-println (str.substring(0,1));
+println (userInput.substring(0,1));
 
 for (i = 0; i <= (length5 - 1); i++) {
-	if(str.substring(i, i + 1) == "+") {
+	if(userInput.substring(i, i + 1) == "+") {
 		operator_location = i;
 		println(operator_location);
 	}
