@@ -1,0 +1,21 @@
+String userInput;
+String getOneChar;
+String spaceChar = " ";
+int inputLength;
+int i = 0;
+int spaceLocation = 0;
+
+print ("Please enter some text:  ");
+userInput = System.console().readLine();
+inputLength = userInput.length();
+
+println (inputLength);
+
+while (i < inputLength) {
+	getOneChar = userInput.substring(i, i + 1);
+	if (getOneChar.equals(spaceChar)) {
+		spaceLocation = i;
+		println(userInput.substring(0, i));
+	}
+	i++;
+}
