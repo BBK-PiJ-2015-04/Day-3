@@ -1,0 +1,108 @@
+String str;
+
+Rectangle one = new Rectangle();
+
+one.upLeft = new Point();
+one.downRight = new Point();
+
+one.upLeft.x = 5;
+one.upLeft.y = 6;
+
+one.downRight.x = 10;
+one.downRight.y = -3;
+
+println ("Please enter the Up Left corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+one.upLeft.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+one.upLeft.y = Double.parseDouble(str);
+println();
+
+println ("Please enter the Down Right corner's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+one.downRight.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+one.downRight.y = Double.parseDouble(str);
+println();
+
+double perimeter;
+double area;
+
+perimeter = ((one.downRight.x - one.upLeft.x) + (one.upLeft.y - one.downRight.y) * 2);
+area = (one.downRight.x - one.upLeft.x) * (one.upLeft.y - one.downRight.y);
+
+println ("The perimeter is " + perimeter);
+println ("The area is " + area);
+
+
+println(one.upLeft.x);
+println(one.upLeft.y);
+println(one.downRight.x);
+println(one.downRight.y);
+
+/*
+
+Point one = new Point();
+
+println ("Please enter the first co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+one.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+one.y = Double.parseDouble(str);
+println();
+
+Point two = new Point();
+
+println ("Please enter the second co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+two.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+two.y = Double.parseDouble(str);
+println();
+
+Point three = new Point();
+
+println ("Please enter the third co-ordinate...");
+print ("The X value: ");
+str = System.console().readLine();
+three.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+three.y = Double.parseDouble(str);
+println();
+
+double distance12, distance13, distance23;
+
+distance12 = Math.sqrt(((one.x - two.x) * (one.x - two.x)) + ((one.y - two.y) * (one.y - two.y)));
+distance13 = Math.sqrt(((one.x - three.x) * (one.x - three.x)) + ((one.y - three.y) * (one.y - three.y)));
+distance23 = Math.sqrt(((two.x - three.x) * (two.x - three.x)) + ((two.y - three.y) * (two.y - three.y)));
+
+if (distance12 < distance13 && distance12 < distance23) {
+	println ("The Points 1 & 2 are the closest.");
+}
+else if (distance13 < distance23) {
+	println ("The Points 1 & 3 are the closest.");
+}
+else {
+	println ("The Points 2 & 3 are the closest.");
+}
+
+*/
+
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+Point upLeft;
+Point downRight;
+}
