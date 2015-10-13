@@ -29,14 +29,23 @@ str = System.console().readLine();
 one.downRight.y = Double.parseDouble(str);
 println();
 
-double perimeter;
-double area;
+Point thirdPoint = new Point();
 
-perimeter = (((one.downRight.x - one.upLeft.x) + (one.upLeft.y - one.downRight.y)) * 2);
-area = (one.downRight.x - one.upLeft.x) * (one.upLeft.y - one.downRight.y);
+println ("Please enter the Third Point's co-ordinates...");
+print ("The X value: ");
+str = System.console().readLine();
+thirdPoint.x = Double.parseDouble(str);
+print ("The Y value: ");
+str = System.console().readLine();
+thirdPoint.y = Double.parseDouble(str);
+println();
 
-println ("The perimeter is " + perimeter);
-println ("The area is " + area);
+if ((thirdPoint.x < one.upLeft.x || thirdPoint.x > one.downRight.x) || (thirdPoint.y > one.upLeft.y || thirdPoint.y < one.downRight.y)) {
+	println ("The Third Point is outside the rectangle.");
+}
+else {
+	println ("The Third Point is inside the rectangle.");
+}
 
 class Point {
 	double x;
