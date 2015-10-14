@@ -1,0 +1,30 @@
+String sentence;
+String singleLetter;
+int lengthSentence;
+int lengthChar = 0;
+int i = 0;
+int j = 0;
+
+println ("Please enter some text below:");
+sentence = System.console().readLine();
+lengthSentence = sentence.length();
+
+while (lengthChar != 1) {
+	print ("Now enter a single letter: ");
+	singleLetter = System.console().readLine();
+	lengthChar = singleLetter.length();
+}
+
+/*
+for (i = 0; i < inputLength; i++) {
+	getOneChar = userInput.substring(i, i + 1);
+	if (getOneChar.equals(spaceChar)) {
+		println (userInput.substring(j, i));
+		// userInput = userInput.substring(i, inputLength - 1);
+		j = i;
+	}
+}
+
+println (userInput.substring(j, i)); // last word left
+
+*/
