@@ -3,19 +3,19 @@ String getOneChar;
 String spaceChar = " ";
 int inputLength;
 int i = 0;
-int spaceLocation = 0;
+int j = 0;
 
-print ("Please enter some text:  ");
+println ("Please enter some text below:");
 userInput = System.console().readLine();
 inputLength = userInput.length();
 
-println (inputLength);
-
-while (i < inputLength) {
+for (i = 0; i < inputLength; i++) {
 	getOneChar = userInput.substring(i, i + 1);
 	if (getOneChar.equals(spaceChar)) {
-		spaceLocation = i;
-		println(userInput.substring(0, i));
+		println (userInput.substring(j, i));
+		// userInput = userInput.substring(i, inputLength - 1);
+		j = i;
 	}
-	i++;
 }
+
+println (userInput.substring(j, i)); // last word left
