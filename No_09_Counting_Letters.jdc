@@ -1,5 +1,6 @@
 String sentence;
-String singleLetter;
+String singleLetter = " ";
+String getOneChar;
 int lengthSentence;
 int lengthChar = 0;
 int i = 0;
@@ -10,21 +11,22 @@ sentence = System.console().readLine();
 lengthSentence = sentence.length();
 
 while (lengthChar != 1) {
-	print ("Now enter a single letter: ");
+	print ("Now enter the letter to search for: ");
 	singleLetter = System.console().readLine();
 	lengthChar = singleLetter.length();
 }
 
-/*
-for (i = 0; i < inputLength; i++) {
-	getOneChar = userInput.substring(i, i + 1);
-	if (getOneChar.equals(spaceChar)) {
-		println (userInput.substring(j, i));
-		// userInput = userInput.substring(i, inputLength - 1);
-		j = i;
+for (i = 0; i < lengthSentence; i++) {
+	getOneChar = sentence.substring(i, i + 1);
+	if (getOneChar.equals(singleLetter)) {
+		j++;
 	}
 }
 
-println (userInput.substring(j, i)); // last word left
+if (j == 1) {
+	println ("The letter " + singleLetter + " appears just once.");
+}
 
-*/
+else {
+	println ("The letter " + singleLetter + " appears " + j + " times.");
+}
