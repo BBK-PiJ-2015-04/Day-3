@@ -1,0 +1,26 @@
+println ("Please enter the word to test for \"Palindromeiness\": ");
+String wordToTest = System.console().readLine();
+int wordLength = wordToTest.length();
+
+
+int middlePoint = (Math.abs(wordLength / 2));
+
+boolean palindrome = true;
+String leftChar;
+String rightChar;
+
+for (int i = 0; i < middlePoint; i++) {
+	leftChar = wordToTest.substring (i, i + 1);
+	rightChar = wordToTest.substring (wordLength - i - 1, wordLength - i);
+	if (!(leftChar.equals(rightChar))) {
+		palindrome = false;
+	}
+}
+
+if (palindrome) {
+	println ("Yes! The word \"" + wordToTest + "\" is indeed a Pailndrome! Well done!");
+}
+
+else {
+	println ("Sorry but \"" + wordToTest + "\" isn't quite a Pailndrome. Nice try though!");
+}
