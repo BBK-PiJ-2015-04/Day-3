@@ -1,0 +1,140 @@
+print ("Total cost of purchase:");
+String str = System.console().readLine();
+double costPurchase = Double.parseDouble(str);
+
+print ("Amount of money handed:");
+str = System.console().readLine();
+double moneyHanded = Double.parseDouble(str);
+
+double changeToGive = moneyHanded - costPurchase;
+double originalChange = changeToGive;
+
+// Count Fifty Pound Notes
+
+int fiftyNotes = 0;
+
+while (changeToGive >= 50) {
+	changeToGive = changeToGive - 50;
+	fiftyNotes++;
+}
+
+// Count Twenty Pound Notes
+
+int twentyNotes = 0;
+
+while (changeToGive >= 20) {
+	changeToGive = changeToGive - 20;
+	twentyNotes++;
+}
+
+// Count Ten Pound Notes
+
+int tenNotes = 0;
+
+while (changeToGive >= 10) {
+	changeToGive = changeToGive - 10;
+	tenNotes++;
+}
+
+// Count Five Pound Notes
+
+int fiveNotes = 0;
+
+while (changeToGive >= 5) {
+	changeToGive = changeToGive - 5;
+	fiveNotes++;
+}
+
+// Count Two Pound Coins
+
+int twoCoins = 0;
+
+while (changeToGive >= 2) {
+	changeToGive = changeToGive - 2;
+	twoCoins++;
+}
+
+// Count One Pound Coins
+
+int oneCoins = 0;
+
+while (changeToGive >= 1) {
+	changeToGive = changeToGive - 1;
+	oneCoins++;
+}
+
+// Count Fifty Pence Coins
+
+int fiftyPenceCoins = 0;
+
+while (changeToGive >= 0.5) {
+	changeToGive = changeToGive - 0.5;
+	fiftyPenceCoins++;
+}
+
+// Count Twenty Pence Coins
+
+int twentyPenceCoins = 0;
+
+while (changeToGive >= 0.2) {
+	changeToGive = changeToGive - 0.2;
+	twentyPenceCoins++;
+}
+
+// Count Ten Pence Coins
+
+int tenPenceCoins = 0;
+
+while (changeToGive >= 0.1) {
+	changeToGive = changeToGive - 0.1;
+	tenPenceCoins++;
+}
+
+// Count Five Pence Coins
+
+int fivePenceCoins = 0;
+
+while (changeToGive >= 0.05) {
+	changeToGive = changeToGive - 0.05;
+	fivePenceCoins++;
+}
+
+// Count Two Pence Coins
+
+int twoPenceCoins = 0;
+
+while (changeToGive >= 0.02) {
+	changeToGive = changeToGive - 0.02;
+	twoPenceCoins++;
+}
+
+// Count One Pence Coins
+
+int onePenceCoins = 0;
+
+while (changeToGive >= 0.01) {
+	changeToGive = changeToGive - 0.01;
+	onePenceCoins++;
+}
+
+println ();
+println ("Your purchase cost " + costPurchase);
+println ("And you handed " + moneyHanded);
+println ("Your change of " + originalChange);
+println ("Is given as follows: ");
+println ("Fifty Pound Notes: " + fiftyNotes);
+println ("Twenty Pound Notes: " + twentyNotes);
+println ("Ten Pound Notes: " + tenNotes);
+println ("Five Pound Notes: " + fiveNotes);
+println ("Two Pound Coins: " + twoCoins);
+println ("One Pound Coins: " + oneCoins);
+println ("Fifty Pence Coins: " + fiftyPenceCoins);
+println ("Twenty Pence Coins: " + twentyPenceCoins);
+println ("Ten Pence Coins: " + tenPenceCoins);
+println ("Five Pence Coins: " + fivePenceCoins);
+println ("Two Pence Coins: " + twoPenceCoins);
+println ("One Pence Coins: " + onePenceCoins);
+
+if (changeToGive > 0) {
+	println ("Rounding error means I keep a penny ;) ");
+}
