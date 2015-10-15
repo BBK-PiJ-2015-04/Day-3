@@ -1,0 +1,6 @@
+println ("Please enter text to duplicate & reverse: ");
+String wordToReverse = System.console().readLine();
+int wordLength = wordToReverse.length();
+
+println (wordToReverse);
+println (wordLength);
