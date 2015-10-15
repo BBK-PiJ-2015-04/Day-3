@@ -2,5 +2,12 @@ println ("Please enter text to duplicate & reverse: ");
 String wordToReverse = System.console().readLine();
 int wordLength = wordToReverse.length();
 
+String leftChar;
+
+for (int i = (wordLength - 1); i != (-1); i--) {
+	leftChar = wordToReverse.substring (i, i + 1);
+	wordToReverse = wordToReverse + leftChar;
+}
+
+println ("Here is what you need:");
 println (wordToReverse);
-println (wordLength);

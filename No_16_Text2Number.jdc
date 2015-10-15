@@ -1,0 +1,4 @@
+print ("Enter a number in the format like “23,419.34” :");
+String numberEntered = System.console().readLine();
+
+

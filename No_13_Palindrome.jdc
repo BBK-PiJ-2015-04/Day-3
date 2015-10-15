@@ -2,7 +2,6 @@ println ("Please enter the word to test for \"Palindromeiness\": ");
 String wordToTest = System.console().readLine();
 int wordLength = wordToTest.length();
 
-
 int middlePoint = (Math.abs(wordLength / 2));
 
 boolean palindrome = true;
