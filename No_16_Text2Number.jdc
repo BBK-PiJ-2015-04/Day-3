@@ -99,8 +99,6 @@ for (int i = 0; i <= (numberLength - 4); i++) {
 	}
 }
 
-println (numberWithoutCommas);
-
 numberLength = numberWithoutCommas.length(); // New length without commas and fraction
 
 // Now we work out the left hand side of the decimal point
