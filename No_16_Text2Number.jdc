@@ -1,4 +1,111 @@
-print ("Enter a number in the format like “23,419.34” :");
+print ("Enter a number in the format like \"23,419.34\" :");
 String numberEntered = System.console().readLine();
+int numberLength = numberEntered.length();
+double numberToHalve;
+
+println (numberEntered);
+println (numberLength);
+
+// The last two digits are after the decimal point
+
+String digit = (numberEntered.substring(numberLength - 1, numberLength));
+
+if (digit.equals("1")) {
+	numberToHalve = 0.01;
+}
+
+else if (digit.equals("2")) {
+	numberToHalve = 0.02;
+}
+
+else if (digit.equals("3")) {
+	numberToHalve = 0.03;
+}
+
+else if (digit.equals("4")) {
+	numberToHalve = 0.04;
+}
+
+else if (digit.equals("5")) {
+	numberToHalve = 0.05;
+}
+
+else if (digit.equals("6")) {
+	numberToHalve = 0.06;
+}
+
+else if (digit.equals("7")) {
+	numberToHalve = 0.07;
+}
+
+else if (digit.equals("8")) {
+	numberToHalve = 0.08;
+}
+
+else if (digit.equals("9")) {
+	numberToHalve = 0.09;
+}
+
+else {
+	numberToHalve = 0;
+}
+
+// Now the other digit
+
+digit = (numberEntered.substring(numberLength - 2, numberLength - 1));
+
+if (digit.equals("1")) {
+	numberToHalve = numberToHalve + 0.1;
+}
+
+else if (digit.equals("2")) {
+	numberToHalve = numberToHalve + 0.2;
+}
+
+else if (digit.equals("3")) {
+	numberToHalve = numberToHalve + 0.3;
+}
+
+else if (digit.equals("4")) {
+	numberToHalve = numberToHalve + 0.4;
+}
+
+else if (digit.equals("5")) {
+	numberToHalve = numberToHalve + 0.5;
+}
+
+else if (digit.equals("6")) {
+	numberToHalve = numberToHalve + 0.6;
+}
+
+else if (digit.equals("7")) {
+	numberToHalve = numberToHalve + 0.7;
+}
+
+else if (digit.equals("8")) {
+	numberToHalve = numberToHalve + 0.8;
+}
+
+else if (digit.equals("9")) {
+	numberToHalve = numberToHalve + 0.9;
+}
+
+else {}
+
+// Now we work out the left hand side of the decimal point
+
+for (int i = (numberLength - 4); i != (-1); i--) {
+	digit = (numberEntered.substring (i, i + 1));
+	println (digit + "  " +(Math.pow(10, (numberLength - i - 4))));
+}
+
+
+
+
+
+
+
+
+println (numberToHalve);
 
 
