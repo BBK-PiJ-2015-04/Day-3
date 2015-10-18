@@ -38,6 +38,6 @@ class Point {
 }
 
 class Rectangle {
-Point upLeft;
-Point downRight;
+	Point upLeft;
+	Point downRight;
 }
